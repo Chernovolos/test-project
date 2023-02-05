@@ -1,0 +1,66 @@
+.card {
+    display: flex;
+    align-items: end;
+    border-radius: .8em;
+    padding: 1.1em;
+    background-size: 150%;
+    transition: background-size 880ms;
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-20px);
+}
+
+.card1 {
+    position: relative;
+    grid-area: left;
+    background-image: url('../../images/clothing1.jpg');
+}
+
+.card1:before {
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    content: "";
+    background: url('../../images/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.card2 {
+    background-image: url('../../images/clothing2.jpg');
+}
+
+.card3 {
+    background-image: url('../../images/clothing3.jpg');
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 1.5em;
+    padding: 1.5em;
+    width: 100%;
+    transition: transform 800ms;
+}
+
+.product-title  {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1.8rem;
+}
